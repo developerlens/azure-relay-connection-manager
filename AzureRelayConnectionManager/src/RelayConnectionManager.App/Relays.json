@@ -1,0 +1,13 @@
+{
+  "Description": "Json Entries for Relays Endpoints",
+  "RelayItems": [
+    {
+      "relayNamespace": "",
+      "keyName": "",
+      "key": "",
+      "entityPath": "",
+      "forwardTo": ""
+    }
+  ]
+}
+

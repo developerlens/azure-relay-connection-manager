@@ -1,0 +1,31 @@
+{
+  "Serilog": {
+    "Using": [
+      "Serilog.Sinks.File",
+      "Serilog.Sinks.Async"
+    ],
+    "MinimumLevel": "Debug",
+    "WriteTo:Async": {
+      "Name": "Async",
+      "Args": {
+        "configure": [
+          {
+            "Name": "File",
+            "Args": {
+              "path": "C:\\AppLogs\\Relay_Logs_",
+              "rollingInterval": "Day",
+              "restrictedToMinimumLevel": "Verbose",
+              "outputTemplate": "{Timestamp:o} [{Level:u3}] ({Application}/{Service}/{MachineName}/{ThreadId}) {SourceContext} {Message}{NewLine}{Exception}"
+            }
+          }
+        ]
+      }
+    },
+    "Enrich": [ "FromLogContext", "WithMachineName", "WithThreadId", "WithThreadName", "WithEnvironmentUserName", "ClientIP", "Elapsed", "RequestPath", "RequestMethod" ],
+    "Properties": {
+    },
+    "File": {
+      "ArchivePath": "C:\\AppLogs\\Archive\\{UtcDate:yyyy}\\{UtcDate:MM}"
+    }
+  }
+}
