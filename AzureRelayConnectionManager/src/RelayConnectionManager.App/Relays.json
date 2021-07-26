@@ -2,10 +2,10 @@
   "Description": "Json Entries for Relays Endpoints",
   "RelayItems": [
     {
-      "relayNamespace": "accessbank-dev",
+      "relayNamespace": "dev",
       "keyName": "Listen",
       "key": "2ovjIdGQLS2yAMyF6MEDdfsos3UKJmCTBcbhHlAZmJQ=",
-      "entityPath": "tamara",
+      "entityPath": "path",
       "forwardTo": "https://localhost:44374/"
     }
   ]
